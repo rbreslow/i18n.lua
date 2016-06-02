@@ -45,18 +45,18 @@ if CLIENT then
 
     --[[ PUBLIC: ]]
 
-    --- Retrieve the current working ISO 3166-1 locale.
+    --- Retrieve the current working ISO 639-1 locale.
     function I18n.prototype:GetLocale()
             return self._locale
     end
 
-    --- Retrieve the current working ISO 3166-1 fallback locale.
+    --- Retrieve the current working ISO 639-1 fallback locale.
     function I18n.prototype:GetFallbackLocale()
         return self._fallbackLocale
     end
 
     --- Set the current working locale.
-    -- @param locale The ISO 3166-1 alpha-2 value
+    -- @param locale The ISO 639-1 value
     function I18n.prototype:SetLocale(locale)
         IS.enforce_arg(1, 'SetLocale', 'string', type(locale))
 
@@ -64,7 +64,7 @@ if CLIENT then
     end
 
     --- Set the current working fallback locale.
-    -- @param fallbackLocale The ISO 3166-1 alpha-2 value
+    -- @param fallbackLocale The ISO 639-1 value
     function I18n.prototype:SetFallbackLocale(fallbackLocale)
         IS.enforce_arg(1, 'SetFallbackLocale', 'string', type(fallbackLocale))
 
